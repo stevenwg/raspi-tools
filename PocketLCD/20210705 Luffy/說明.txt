@@ -1,0 +1,9 @@
+/boot/config.txt換成這個
+
+然後方向可以打這指令：
+xrandr --output HDMI-1 --rotate right
+
+Reference:
+https://www.raspberrypi.org/documentation/configuration/display_rotation.md
+
+或是在選單設定

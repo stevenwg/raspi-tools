@@ -1,0 +1,57 @@
+[pi4]
+max_framebuffers=2
+
+[all]
+arm_64bit=1
+kernel=vmlinuz
+cmdline=cmdline.txt
+initramfs initrd.img followkernel
+
+# Enable the audio output, I2C and SPI interfaces on the GPIO header
+dtparam=audio=on
+dtparam=i2c_arm=on
+dtparam=spi=on
+
+# Enable the FKMS ("Fake" KMS) graphics overlay, enable the camera firmware
+# and allocate 128Mb to the GPU memory
+# dtoverlay=vc4-fkms-v3d
+
+config_hdmi_boost=4
+hvs_priority=0x32ff
+max_usb_current=1
+gpu_mem=128
+start_x=1
+
+hdmi_group=2
+hdmi_mode=87
+hdmi_pixel_freq_limit=194186000
+
+hdmi_timings=1440 0 60 35 45 2560 0 10 4 4 0 0 0 60 0 194186000 3
+# hdmi_timings=2560 0 123 10 50 1600 0 12 4 4 0 0 0 50 0 222183000 5
+hdmi_drive=2
+
+display_rotate=0
+framebuffer_width=1440
+framebuffer_height=2560
+
+max_framebuffer_width=1440
+max_framebuffer_height=2560
+# hdmi_pixel_freq_limit=222183000
+
+
+# max_framebuffers=2
+
+
+
+# Comment out the following line if the edges of the desktop appear outside
+# the edges of your display
+disable_overscan=1
+
+# If you have issues with audio, you may try uncommenting the following line
+# which forces the HDMI output into HDMI mode instead of DVI (which doesn't
+# support audio output)
+#hdmi_drive=2
+
+# If you have a CM4, uncomment the following line to enable the USB2 outputs
+# on the IO board (assuming your CM4 is plugged into such a board)
+#dtoverlay=dwc2,dr_mode=host

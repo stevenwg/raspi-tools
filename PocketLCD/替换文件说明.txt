@@ -1,0 +1,19 @@
+SD卡上有个config.txt 文件，把我给你的文件对应你的系统名，选择相应的文件，改名为config.txt 替换掉SD卡上的config.txt ,注意要备份你原来的config.txt 文件（原系统的文件可以改名备份），
+
+下面是旋转设置
+添加以下的某一行：    后面说明部分不用添加
+
+display_rotate=0                   不旋转 Normal?
+
+display_rotate=1                    转90 degrees?
+
+display_rotate=2                  转180 degrees?
+
+display_rotate=3                 转270 degrees?
+
+display_rotate=0x10000            左右翻转horizontal flip?
+
+display_rotate=0x20000             上下翻转vertical flip?
+
+注意：这个方法的效果是永久的。
+
