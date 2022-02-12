@@ -1,0 +1,15 @@
+country=TW
+ctrl_interface=/var/run/wpa_supplicant
+update_config=1
+
+network={
+    scan_ssid=1
+    ssid="lu_family-5G"
+    psk="25339730"
+}
+
+network={
+    scan_ssid=1
+    ssid="lu_family-2.4G"
+    psk="25339730"
+}
